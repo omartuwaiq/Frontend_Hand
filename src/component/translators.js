@@ -80,7 +80,7 @@ function handleconnectAs(event){
         console.log(Listservices)
         axios({
             method: "post",
-            url: 'http://localhost:8080/api/serv/add',
+            url: 'https://handbackend.herokuapp.com/api/serv/add',
             data: Listservices
         });
     }
@@ -91,7 +91,7 @@ function handleconnectAs(event){
         console.log(Listservices)
         axios({
             method: "put",
-            url: "http://localhost:8080/api/serv/update/{id}",
+            url: "https://handbackend.herokuapp.com/api/serv/update/{id}",
             data: Listservices
         })
     }

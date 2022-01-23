@@ -37,7 +37,7 @@ export default function Employeedoctor() {
         event.preventDefault();
         axios({
             method: "post",
-            url: 'http://localhost:8080/api/serv/add',
+            url: 'https://handbackend.herokuapp.com/api/serv/add',
             data: ListConsultings
         });
     }
@@ -48,7 +48,7 @@ export default function Employeedoctor() {
         console.log(ListConsultings)
         axios({
             method: "put",
-            url: "http://localhost:8080/api/serv/update/{id}",
+            url: "https://handbackend.herokuapp.com/api/serv/update/{id}",
             data: ListConsultings
         })
     }

@@ -28,7 +28,7 @@ export default function Homepage() {
     
     axios({
       method: "get",
-      url: "api/user/login",
+      url: "https://handbackend.herokuapp.com/api/user/login",
       params: { username: username, password: password }
     })
       .then((res => {

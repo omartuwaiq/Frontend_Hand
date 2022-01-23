@@ -14,7 +14,7 @@ export default function Trainings() {
 
   //يجيب البيانات من قاعدة البيانات ويستعرضها في جدول  "Sign Lnguage Training" (١)
   useEffect(() => {
-    axios.get("/Training")
+    axios.get("https://handbackend.herokuapp.com/Training")
       .then(result => setData(result.data));
     console.log(data);
   }, []);
@@ -55,7 +55,7 @@ export default function Trainings() {
     console.log(Listcourse)
     axios({
       method: "post",
-      url: "/Training/add",
+      url: "https://handbackend.herokuapp.com/Training/add",
       data: Listcourse
     });
     console.log("after axios")

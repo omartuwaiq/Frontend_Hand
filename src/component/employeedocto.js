@@ -10,7 +10,7 @@ export default class Employeedocto extends Component {
     }
 
     componentDidMount() {
-        axios.get("api/serv")
+        axios.get("https://handbackend.herokuapp.com/api/serv")
             .then(resu => {
                 const doctorarray = resu.data;
                 this.setState({ doctorarray });
@@ -18,7 +18,7 @@ export default class Employeedocto extends Component {
     }
 
     deleteDoctor(serviceID) {
-        axios.delete(`api/serv/delete/${serviceID}`)
+        axios.delete(`https://handbackend.herokuapp.com/api/serv/delete/${serviceID}`)
             .then(resul => {
                 const doctorarray = this.state.doctorarray.filter
                     (HearingImpaireds => HearingImpaireds.serviceID !== serviceID);

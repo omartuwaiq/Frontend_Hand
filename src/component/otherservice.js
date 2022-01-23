@@ -11,7 +11,7 @@ data:"",time:"",connectAs:"",email:"",delivery:"",adtex:"",appointment:"",course
 }])
 
    useEffect(() =>{
-       axios.get("api/serv")
+       axios.get("https://handbackend.herokuapp.com/api/serv")
        .then(result => setInfo(result.data));
    },[]);
 

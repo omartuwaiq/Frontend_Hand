@@ -11,7 +11,7 @@ export default class EmployeeTrans extends Component {
     }
     //  هذا الكود يقراء البيانات من قاعدة البيانات ويستعرضها لي في الفرونت اند
     componentDidMount() {
-        axios.get("api/serv")
+        axios.get("https://handbackend.herokuapp.com/api/serv")
             .then(result => {
                 const translatorarray = result.data;
                 this.setState({ translatorarray });
@@ -20,7 +20,7 @@ export default class EmployeeTrans extends Component {
 
     }
     deletetranslator(serviceID) {
-        axios.delete(`api/serv/delete/${serviceID}`)
+        axios.delete(`https://handbackend.herokuapp.com/api/serv/delete/${serviceID}`)
             .then(resul => {
                 const translatorarray = this.state.translatorarray.filter
                     (enrolledHearingImpaired => enrolledHearingImpaired.serviceID !== serviceID);
