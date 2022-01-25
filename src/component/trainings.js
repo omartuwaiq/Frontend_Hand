@@ -7,7 +7,6 @@ export default function Trainings() {
   let trainId = Number(params.trainingsId)
 
   const [nationalId, setnationalId] = useState("")
-  //const [serviceID, setserviceID] = useState("")
   const [trainingID, settrainingID] = useState("")
   const [course, setcourse] = useState("")// go to the serv table 
   const [data, setData] = useState([{ tweek: "", tday: "", ttime: "", t_text: "" }])//المعلومات الي ابيها تجي من قاعدة البيانات(١)
@@ -19,25 +18,15 @@ export default function Trainings() {
     console.log(data);
   }, []);
 
-  // function sendtraining(id) {
-  //   axios.get(`${id}`)
-  //     .then(result => setData(result.data));
-  // }
-
   function handletrainingID(event) {
     settrainingID((event.target.value));
   }
   function handlenationalId(event) {
     setnationalId((event.target.value));
   }
-  // function handleserviceID(event){
-  //   setserviceID((event.target.value));
-  // }
-
   function handlecourse(event) {
     setcourse((event.target.value));
   }
-
 
   let Listcourse = {
     trainingID: trainingID,
@@ -46,7 +35,6 @@ export default function Trainings() {
     enrolledHearingImpaireds: [{
       hearingimpairedID: nationalId
     }]
-    // trainingname:trainingname
   }
 
   // ارسال البيانات الي قاعدة البيانات 
@@ -102,57 +90,6 @@ export default function Trainings() {
           </div>
 
         })}
-
-        {/* <h2>trainings</h2>
-        <table border="1">
-          <thead>
-            <tr>
-              <th colSpan="5"> First Week </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Sunday</td>
-              <td>Monday</td>
-              <td>Tusday</td>
-              <td>Wednesday</td>
-              <td>Thursday</td>
-            </tr>
-            <tr>
-              <td>9:00AM - 10:30AM <br /> Arabic Letters<br /> welcome men and women </td>
-              <td>-</td>
-              <td>10:00AM - 11:30AM <br />Arabic number <br />welcome men and women</td>
-              <td>9:00AM - 11:00AM <br /> Most used words <br /> welcome men and women </td>
-              <td>9:00AM - 11:00AM <br /> emergencey words <br />welcome men and women</td>
-            </tr>
-          </tbody>
-        </table>
-        <br /> <br /> <br /> <br />
-        <table border="1">
-          <thead>
-            <tr>
-              <th colSpan="5"> Second Week </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Sunday</td>
-              <td>Monday</td>
-              <td>Tusday</td>
-              <td>Wednesday</td>
-              <td>Thursday</td>
-            </tr>
-            <tr>
-              <td>9:00AM - 10:30AM <br /> Most used sentences<br /> welcome men and women </td>
-              <td>-</td>
-              <td>10:00AM - 11:30AM <br /> - - -  <br />welcome men and women</td>
-              <td>9:00AM - 11:00AM <br />  - - - <br /> welcome men and women </td>
-              <td>9:00AM - 11:00AM <br />  - - - <br />welcome men and women</td>
-            </tr>
-          </tbody>
-        </table> */}
-
-
       </main>
     );
   }
@@ -161,19 +98,17 @@ export default function Trainings() {
     return (
       // go to database
       <main>
-        
+
         <div className="Programarea">
 
           <div className="titleProgramarea">
             <div className="infoprogram">
               <p className="onlineclass" style={{ color: "#EA5C2B" }}>Program information</p><hr />
-             <p> Program start: within the next five days<br /><br />
+              <p> Program start: within the next five days<br /><br />
                 Program duration: thirty days<br /><br />
                 Program location: At our headquarters<br /><br />
                 Program value: Free</p>
-
             </div>
-
           </div>
           <div className="formProgramarea" >
             <form>

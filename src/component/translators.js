@@ -17,8 +17,6 @@ export default function Translators() {
     const [email, setemail] = useState("")
     const [hearingimpairedID, sethearingimpairedID] = useState("")
     const [adtex, setadtex] = useState("")
-    //const [delivery, setdelivery] = useState("")
-
 
     function handleserviceID(event) {
         setserviceID((event.target.value));
@@ -35,9 +33,9 @@ export default function Translators() {
         setnationalId((event.target.value));
     }
 
-function handleconnectAs(event){
-    setconnectAs((event.target.value));
-}
+    function handleconnectAs(event) {
+        setconnectAs((event.target.value));
+    }
 
     function handledate(event) {
         setdate((event.target.value));
@@ -131,31 +129,31 @@ function handleconnectAs(event){
 
             <main>
                 <div className="text">
-                    <div className="transtext"> 
+                    <div className="transtext">
 
-                <h2>Request for translaation of text</h2>
-                </div>
-                <div className="formtext">
-                <form>
-                    <div className="label">
-                        <label>National ID</label></div>
-                        <input type="text" onChange={handlenationalId} ></input><br />
-                        <div className="label">
-                        <label>service ID </label>
+                        <h2>Request for translaation of text</h2>
                     </div>
-                    <input type="text" onChange={handleserviceID}></input><br />
-                    <div className="label">
-                    <label>email</label></div>
-                    <input type="text" onChange={handleemail}></input><br />
-                    <div className="label">
-                        <label> your text</label>
+                    <div className="formtext">
+                        <form>
+                            <div className="label">
+                                <label>National ID</label></div>
+                            <input type="text" onChange={handlenationalId} ></input><br />
+                            <div className="label">
+                                <label>service ID </label>
+                            </div>
+                            <input type="text" onChange={handleserviceID}></input><br />
+                            <div className="label">
+                                <label>email</label></div>
+                            <input type="text" onChange={handleemail}></input><br />
+                            <div className="label">
+                                <label> your text</label>
+                            </div>
+                            <textarea type="text" onChange={handleadtex}></textarea><br />
+
+                            <button className="submit" type="submit" onClick={handleClick}><span>submit</span></button>
+
+                        </form>
                     </div>
-                    <textarea type="text" onChange={handleadtex}></textarea><br />
-
-                    <button className="submit" type="submit" onClick={handleClick}><span>submit</span></button>
-
-                </form>
-                </div>
                 </div>
             </main>
         );
@@ -179,15 +177,15 @@ function handleconnectAs(event){
                             <div className="label">
 
                                 <label>National ID</label></div>
-                                <input type="text" onChange={handlenationalId} ></input><br />
-                                <div className="label">
+                            <input type="text" onChange={handlenationalId} ></input><br />
+                            <div className="label">
                                 <label>service ID </label></div>
-                            
+
                             <input type="text" onChange={handleserviceID}></input><br />
-                            
+
                             <div className="label">
                                 <label>Service Type</label></div>
-                            
+
                             <select onChange={handleservicetypetranslator} name="services">
                                 <option onChange={handleservicetypetranslator} value="face to face translator">select</option>
 
@@ -196,22 +194,21 @@ function handleconnectAs(event){
                             <br />
                             <div className="label">
                                 <label>Location</label></div>
-                            
+
                             <input type="text" onChange={handlelaoction} ></input><br />
                             <div className="label">
-                                <label>Delivery</label></div><br/>
-                            
-                            <input type="radio" id="Car" value="Car" name="Delivery" onChange={handledelivery} /> <label>I have a car</label><br />
-                          <input type="radio" id="Nocar" value="Nocar" name="Delivery" onChange={handledelivery} /><label>I need delivery</label><br />
+                                <label>Delivery</label></div><br />
 
-                            {/* <input type="text" onChange={handledelivery} ></input><br /> */}
+                            <input type="radio" id="Car" value="Car" name="Delivery" onChange={handledelivery} /> <label>I have a car</label><br />
+                            <input type="radio" id="Nocar" value="Nocar" name="Delivery" onChange={handledelivery} /><label>I need delivery</label><br />
+
                             <div className="label">
                                 <label>date</label></div>
-                            
+
                             <input type="text" id="note" name="note" rows="10" cols="30" onChange={handledate} /><br />
                             <div className="label">
                                 <label>Time</label></div>
-                            
+
                             <input type="text" id="note" name="note" rows="10" cols="30" onChange={handletime} /><br />
 
                             <button className="submit" type="submit" onClick={handleClick}><span>submit</span></button>
@@ -221,23 +218,6 @@ function handleconnectAs(event){
                         </form>
                     </div>
                 </div>
-                {/* <label>phonenumber</label>
-                <input type="text" id="note" name="note" rows="10" cols="30" /><br />
-
-                <label>gender</label><br />
-                <input type="radio" value="male" /><label>male</label><br />
-                <input type="radio" value="female" /><label>female</label><br />
-
-                <label>email</label>
-                <input type="text" id="note" name="note" rows="10" cols="30" /><br />
-
-                <label>date</label><br />
-                <input type="text" id="note" name="note" rows="10" cols="30" /><br />
-                <label>location</label><br />
-                <input type="text" id="note" name="note" rows="10" cols="30" /> */}
-
-
-
             </main>
         );
     }
@@ -261,10 +241,10 @@ function handleconnectAs(event){
                             <div className="label">
 
                                 <label>National ID</label></div>
-                                <input type="text" onChange={handlenationalId} ></input><br />
-                                <div className="label">
+                            <input type="text" onChange={handlenationalId} ></input><br />
+                            <div className="label">
                                 <label>service ID </label></div>
-                           
+
                             <input type="text" onChange={handleserviceID}></input><br />
 
 
@@ -278,16 +258,6 @@ function handleconnectAs(event){
                             </select>
                             <br />
                         </form>
-
-                        {/* <label>phonenumber</label>
-                <input type="text" id="note" name="note" rows="10" cols="30" /><br />
-
-                <label>gender</label><br />
-                <input type="radio" value="male" /><label>male</label><br />
-                <input type="radio" value="female" /><label>female</label><br />
-
-                <label>email</label>
-                <input type="text" id="note" name="note" rows="10" cols="30" /><br /> */}
                         <div className="label">
                             <label>date</label>
                         </div>
@@ -297,7 +267,7 @@ function handleconnectAs(event){
                         </div>
                         <input type="text" id="note" name="note" rows="10" cols="30" onChange={handletime} /><br />
                         <div className="label">
-                            <label>Connect As:</label><br/>
+                            <label>Connect As:</label><br />
                         </div>
                         <input type="radio" id="Zoom" value="Zoom" name="Connact_As" onChange={handleconnectAs} /> <label>Zoom</label><br />
                         <input type="radio" id="FaceTime" value="FaceTime" name="Connact_As" onChange={handleconnectAs} /><label>FaceTime</label><br />

@@ -7,10 +7,6 @@ export default function Homepage() {
   let [username, setUsername] = useState("")
   let [password, setPassword] = useState("")
 
-
-  // let myservice = getMyservice();
-  // localStorage.setItem("myPa", JSON.stringify(myservice));
-  // console.log("In App ", myservice)
   function handleusers(event) {
     setUsername((event.target.value));
   }
@@ -34,12 +30,10 @@ export default function Homepage() {
       .then((res => {
         console.log(res.data)
         if (res.data == "authenticatedemployee") {
-          // props.handleLogin(res.data );
           localStorage.setItem("LogIn", "employee")
           navigate("/")
         }
         else if (res.data == "authenticateddeaf") {
-          // props.handleLogin(res.data );
           localStorage.setItem("LogIn", "deaf")
           navigate("/")
         }
@@ -84,38 +78,3 @@ export default function Homepage() {
     </main>
   );
 }
-
-
-{/* <h4>{new Date().toLocaleTimeString()}</h4>
-        <h2>homepagee</h2>
-        <p>msg</p>
-        <p>adv</p>
-
-        <div className="signlanguage">
-        <h3>sign language training</h3>
-        <p>Go beyond the basics with our</p>
-        <p>Complete an online Sign Language course.<br/>
-The Complete sign language Online Course offers Level 1 and Level 2 courses <br/>
-<a>Learn sign language with us..</a></p>
-        </div>
-        <div className="signtrain">
-          <div className="para">
-         
-         
-          <h2>WHAT MADE YOU DECIDE TO LEARN SIGN LANGUAGE?</h2>
-          <b>We'd love to hear what brought you here today. Are you learning </b>
-          <b>sign language for work, school or to communicate with a new </b> 
-          <b>friend or family member</b><br />
-          <button>LET US KNOW! </button>
-          </div>
-          <div className="img">
-            <img src="img.png" />
-          </div>
-        </div><br />
-
-        <div className="parenttrain">
-          <h3>Parent Education && Auditory-verbal</h3>
-          <p></p>
-          <button>to register</button>
-
-        </div> */}

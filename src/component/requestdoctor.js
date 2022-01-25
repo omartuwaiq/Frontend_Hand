@@ -25,7 +25,7 @@ export default function Employeedoctor() {
     }
 
     let ListConsultings = {
-        serviceID:serviceID,
+        serviceID: serviceID,
         nationalId: nationalId,
         servicetypedoctor: servicetypedoctor,
         adtex: adtex,
@@ -41,33 +41,33 @@ export default function Employeedoctor() {
         });
     }
 
-     //new update 
-     function handleUpdate(event){
+    //new update 
+    function handleUpdate(event) {
         event.preventDefault();
         console.log(ListConsultings)
         axios({
-            method:"put",
-            url:"https://handbackend.herokuapp.com/api/serv/update/{id}",
+            method: "put",
+            url: "https://handbackend.herokuapp.com/api/serv/update/{id}",
             data: ListConsultings
         })
     }
 
- return (
-            <main>
-                <h1>Request a doctor</h1>
-                <div className="signlanguage2" >
+    return (
+        <main>
+            <h1>Request a doctor</h1>
+            <div className="signlanguage2" >
                 <form>
-                <div className="label"> 
-                    <label>National ID: </label></div>
+                    <div className="label">
+                        <label>National ID: </label></div>
                     <input type="text" onChange={handlenationalId} ></input><br />
-                    <div className="label"> 
-                    <label>Service ID: </label></div>
+                    <div className="label">
+                        <label>Service ID: </label></div>
                     <input type="text" onChange={handleserviceID} ></input><br />
-                    <div className="label"> 
-                    <label>Service Type: </label></div>
+                    <div className="label">
+                        <label>Service Type: </label></div>
                     <input type="text" onChange={handleservicetypedoctor}></input><br />
-                    <div className="label"> 
-                    <label>Medical Consulting: </label> <br /></div>
+                    <div className="label">
+                        <label>Medical Consulting: </label> <br /></div>
                     <textarea type="text" onChange={handleadtex}></textarea>
                     <br />
                     <input type="checkbox" onChange={handleappointment} />
@@ -76,9 +76,9 @@ export default function Employeedoctor() {
 
                     <button className="submit" type="submit" onClick={handleUpdate}><span>update</span></button>
                 </form>
-                </div>
+            </div>
 
-            </main>
-        );
+        </main>
+    );
 
 }

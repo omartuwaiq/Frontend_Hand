@@ -29,26 +29,6 @@ export default class EmployeeTrans extends Component {
             })
 
     }
-    // const [data, setData] = useState([{ id:"",servicetype: "", laoction: "", delivery:"" , date: "" , time: "" , connectAs: "" , email:""}]);
-    // useEffect(() => {
-    //     axios.get("api/serv")
-    //         .then(result => setData(result.data));
-    //     console.log(data);
-    // }, []);
-
-
-    // function deleteProposal(id,e){
-    //     console.log("delete")
-    //     axios.delete(`delete/${id}`)
-    //     console.log("alst")
-    // }
-    // }
-    // function sendService(id,e){
-    //     console.log("send")
-    //     axios.get(`api/serv/${id}`)
-    //     .then(result => setData(result.data));
-    //     console.log(data);
-    // }
     render() {
 
         return (
@@ -67,8 +47,6 @@ export default class EmployeeTrans extends Component {
                             <h2>{enrolledHearingImpaired.email}</h2>
                             {console.log("id "+enrolledHearingImpaired.serviceID)}
                             <button onClick={(e) => this.deletetranslator(enrolledHearingImpaired.serviceID)}>delete</button>
-                            {/* <button onClick={(e)=> sendService(HearingImpaireds.id,e)} >send</button> */}
-
                             <hr />
                         </div>
                     }

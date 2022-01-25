@@ -14,7 +14,7 @@ export default function Employeedoctor() {
     function handleserviceID(event) {
         setserviceID((event.target.value));
     }
-   
+
     function handleservicetypelawyer(event) {
         setservicetypelawyer((event.target.value));
     }
