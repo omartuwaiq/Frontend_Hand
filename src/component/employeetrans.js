@@ -9,6 +9,7 @@ export default class EmployeeTrans extends Component {
             translatorarray: []
         };
     }
+    // seocnd
     //  هذا الكود يقراء البيانات من قاعدة البيانات ويستعرضها لي في الفرونت اند
     componentDidMount() {
         axios.get("https://handbackend.herokuapp.com/api/serv")
